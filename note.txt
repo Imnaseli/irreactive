@@ -1,0 +1,2 @@
+for pages/components copy:
+    import '../style/style.scss'
