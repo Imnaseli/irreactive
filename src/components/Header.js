@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import {List } from 'react-bootstrap-icons'
+import Logo from './Logo'
 import { NavLink } from 'react-router-dom'
 import '../style/style.scss'
 
@@ -16,7 +17,7 @@ const Header = () => {
       <nav className="navbar">
         <div className="container">
           <div className="logo">
-            {/* <h1>Irreactive</h1> */}
+            <Logo />
           </div>
           <div className="menu-icon" onClick={handleShowNavbar}>
             <List size={28}/>
