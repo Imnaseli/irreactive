@@ -6,16 +6,16 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-  }
+    }
   
   .navbar {
     height: 60px;
-    background-color: #fef7e5;
+    background-color: var(--gbdarkerforeground-colour);
     position: relative;
   }
   
-  .logo {
-  }
+//   .logo {
+//   }
   
   .menu-icon {
     display: none;
@@ -37,12 +37,12 @@
   .nav-elements ul a {
     font-size: 16px;
     font-weight: 400;
-    color: #2f234f;
+    color: var(--gbfontcolor);
     text-decoration: none;
   }
   
   .nav-elements ul a.active {
-    color: #574c4c;
+    color: var(--gbfontcolor);
     font-weight: 500;
     position: relative;
   }
@@ -54,7 +54,9 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #574c4c;
+
+    //link underline
+    background-color: var(--gbfontcolor);
   }
   
   @media (max-width: 768px) {
@@ -73,7 +75,9 @@
       position: absolute;
       right: 0;
       top: 60px;
-      background-color: #fef7e5;
+
+      //background of the sliding bar
+      background-color: var(--gbdarkerforeground-colour);
       width: 0px;
       height: calc(100vh - 60px);
       transition: all 0.3s ease-in;

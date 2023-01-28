@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-
+import {List } from 'react-bootstrap-icons'
 import { NavLink } from 'react-router-dom'
 import '../style/style.scss'
 
@@ -16,11 +16,10 @@ const Header = () => {
       <nav className="navbar">
         <div className="container">
           <div className="logo">
-            {/* <Brand /> */}
-            <h1>Irreactive</h1>
+            {/* <h1>Irreactive</h1> */}
           </div>
           <div className="menu-icon" onClick={handleShowNavbar}>
-            {/* <h2>I</h2> */}
+            <List size={28}/>
           </div>
           <div className={`nav-elements  ${showNavbar && 'active'}`}>
             <ul>
@@ -30,9 +29,6 @@ const Header = () => {
               <li>
                 <NavLink to="/create">Add</NavLink>
               </li>
-              {/* <li>
-                <NavLink to="/projects">Projects</NavLink>
-              </li> */}
               <li>
                 <NavLink to="/about">About</NavLink>
               </li>

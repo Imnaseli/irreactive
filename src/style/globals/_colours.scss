@@ -3,10 +3,19 @@
     --text-colour:white;
 
     //gruvbox theme color-scheme
-    --gbforeground-color:#a89984;
+    --gbdarkerforeground-colour:#a89984;
+    --gbforeground-colour:#d5c4a1;
     --gbbackground-colour: #282828;
+
+
+    --gbfontcolor:#282828;
+    --gbdetailh1: #d65d0e;
+
+
+
     --gbgreen:#98971a;
     --gbred:#cc241d;
-    --gborange:#d65d0e;
+    --gbdarkerorange:#d65d0e;
+    --gborange:hsl(27, 84%, 43%);
     --gbaqua:#689d6a;
 }
