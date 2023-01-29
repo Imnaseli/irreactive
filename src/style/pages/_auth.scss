@@ -1,0 +1,19 @@
+.auth-outer-container{
+    height: 100%;
+    width: 100%;
+}
+
+.auth-main{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    // width: min(50% - 40px , 1000px);
+    margin-inline: auto;
+}
+
+.auth-continer{
+    display: flex;
+    flex-direction: column;
+    width: min(50% - 40px , 1000px);
+}
