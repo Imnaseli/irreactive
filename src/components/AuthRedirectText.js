@@ -1,12 +1,13 @@
 import React from 'react'
+import '../style/style.scss'
 
 const AuthRedirectText = ({signUp , setSignUp}) => {
   return (
-    <div>
+    <div className='auth-redirect-container'>
         {!signUp ? (
         <>
-            <div className="text-center justify-content-center mt-2 pt-2">
-                <p className="small fw-bold mt-2 pt-1 mb-0">
+            <div className="auth-redirect-div">
+                <p className="auth-redirect-p">
                     Don't have an account ?&nbsp;
                         <span
                         className="auth-redirect-text-donthaveanacc"
@@ -19,9 +20,9 @@ const AuthRedirectText = ({signUp , setSignUp}) => {
         </>
         ) : (
             <>
-                <div className="text-center justify-content-center mt-2 pt-2">
-                    <p className="small fw-bold mt-2 pt-1 mb-0">
-                        Already have an account ?&nbsp;
+                <div className="auth-redirect-div">
+                    <p className="auth-redirect-p">
+                        Already have an account?&nbsp;
                             <span 
                             className="auth-redirect-text-alreadyhaveanacc"
                             onClick={() => setSignUp(false)}>

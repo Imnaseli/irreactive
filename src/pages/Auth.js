@@ -3,7 +3,6 @@ import {
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-import '../style/style.scss'
 import Redline from '../components/RedLine'
 import AuthRedirectText from "../components/AuthRedirectText";
 import AuthHeader from "../components/AuthHeader";
@@ -76,7 +75,7 @@ const Auth = ({setUser}) => {
                 <form className="auth-form" onSubmit={handleAuth}>
                   {signUp && (
                     <>
-                        <div className="firstname-input-div">
+                        <div className="input-div">
                             <input
                                 type="text"
                                 className="form-control input-text-box"
@@ -86,7 +85,7 @@ const Auth = ({setUser}) => {
                                 onChange={handleChange}
                             />
                         </div>
-                        <div className="lastname-input-div">
+                        <div className="input-div">
                             <input
                                 type="text"
                                 className="form-control input-text-box"
@@ -98,7 +97,7 @@ const Auth = ({setUser}) => {
                         </div>
                     </>
                   )}
-                  <div className="email-input-div">
+                  <div className="input-div">
                       <input
                           type="email"
                           className="form-control input-text-box"
@@ -108,7 +107,7 @@ const Auth = ({setUser}) => {
                           onChange={handleChange}
                       />
                   </div>
-                  <div className="password-input-div">
+                  <div className="input-div">
                       <input
                           type="password"
                           className="form-control input-text-box"
@@ -119,7 +118,7 @@ const Auth = ({setUser}) => {
                       />
                   </div>
                   {signUp && (
-                      <div className="confirmpassword-input-div">
+                      <div className="input-div">
                           <input
                           type="password"
                           className="form-control input-text-box"
@@ -136,6 +135,7 @@ const Auth = ({setUser}) => {
             </div>
           </div>
       </div>
+    <Redline/>
     </main>
   )
 }

@@ -1,10 +1,11 @@
 import React from 'react'
+import '../style/style.scss'
 
 const AuthHeader = ({signUp}) => {
   return (
     <div className="auth-heading-container">
     <h1 className="auth-heading">
-      {!signUp ? "Sign-In" : "Sign-Up"}
+      {!signUp ? "Welcome back!" : "Welcome!"}
     </h1>
   </div>
   )
