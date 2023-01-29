@@ -16,6 +16,7 @@ h1{
 
 p{
     margin-top: 0;
+    font-size: clamp(12px , 1.2vw , 20px);
 }
 
 a,a:visited,a:active{

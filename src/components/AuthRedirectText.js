@@ -13,7 +13,7 @@ const AuthRedirectText = ({signUp , setSignUp}) => {
                         className="auth-redirect-text-donthaveanacc"
                         onClick={() => setSignUp(true)}
                         >
-                        Sign Up
+                        Sign Up.
                         </span>
                 </p>
             </div>
@@ -26,7 +26,7 @@ const AuthRedirectText = ({signUp , setSignUp}) => {
                             <span 
                             className="auth-redirect-text-alreadyhaveanacc"
                             onClick={() => setSignUp(false)}>
-                            Sign In
+                            Sign In.
                             </span>
                     </p>
                 </div>

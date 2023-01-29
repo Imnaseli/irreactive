@@ -34,7 +34,13 @@ const Auth = ({setUser}) => {
 
   const handleAuth = async (e) => {
     e.preventDefault();
-    if (!signUp) {
+
+    console.log("button works")
+    console.log(signUp)
+    console.log(email)
+    console.log(password)
+
+    if (!signUp) { //sign in
       if (email && password) {
         const { user } = await signInWithEmailAndPassword(
           auth,
@@ -42,11 +48,11 @@ const Auth = ({setUser}) => {
           password
         );
         setUser(user);
-        // setActive("home");
-      } else {
+        navigate('/')
+      }else {
         return toast.error("All fields are mandatory to fill");
       }
-    } else {
+    }else {//sign up
       if (password !== confirmPassword) {
         return toast.error("Password don't match");
       }

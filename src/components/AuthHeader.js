@@ -5,7 +5,7 @@ const AuthHeader = ({signUp}) => {
   return (
     <div className="auth-heading-container">
     <h1 className="auth-heading">
-      {!signUp ? "Welcome back!" : "Welcome!"}
+      {!signUp ? "Welcome Back!" : "Welcome!"}
     </h1>
   </div>
   )
