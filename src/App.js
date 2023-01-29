@@ -14,11 +14,14 @@ import './style/style.scss';
 
 function App() {
 
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState("me");
   const navigate = useNavigate();
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
+      //soon to change ------------------------------- Remove this var dec, it makes it logged in after every reload
+      authUser = 1
+
       if (authUser) {
         setUser(authUser);
       } else {
@@ -30,7 +33,8 @@ function App() {
   const handleLogout = () => {
     signOut(auth).then(() => {
       setUser(null);
-      navigate("/auth");
+      console.log('handlelog')
+      navigate("/authentication");
     });
   };
 
@@ -41,7 +45,7 @@ function App() {
         <Routes>
          <Route path='/' element = {<Home user = {user} handleLogout = {handleLogout}/>}/>
          <Route path='/detail/:id' element = {<Detail />}/>
-         <Route path='/about' element = {<About />}/>
+         <Route path='/about' element = {<About user = {user} handleLogout = {handleLogout}/>}/>
          <Route path='/authentication' element = {<Auth setUser={setUser} />}/>
          <Route path='/edit/:id' element = {<AddEditblog />}/>
          <Route path='/create' element = {<AddEditblog />}/>

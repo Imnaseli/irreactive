@@ -5,7 +5,7 @@ import Logo from './Logo'
 import { NavLink } from 'react-router-dom'
 import '../style/style.scss'
 
-const Header = () => {
+const Header = ({user , handleLogout}) => {
 
     const [showNavbar, setShowNavbar] = useState(false)
 
@@ -23,19 +23,42 @@ const Header = () => {
             <List size={28}/>
           </div>
           <div className={`nav-elements  ${showNavbar && 'active'}`}>
-            <ul>
+            <ul className='header-links'>
               <li>
                 <NavLink to="/">Home</NavLink>
               </li>
-              <li>
-                <NavLink to="/create">Add</NavLink>
-              </li>
+
+              { user &&(
+                <li>
+                  <NavLink to="/create">Add</NavLink>
+                </li>)}
+
               <li>
                 <NavLink to="/about">About</NavLink>
               </li>
-              <li>
-                <NavLink to="/authentication">Account</NavLink>
-              </li>
+
+              {!user?(
+                <li>
+                  <NavLink to="/authentication">Sign In</NavLink>
+                </li>
+              ):(
+                 
+                  showNavbar? (
+
+                    <li>
+                      <div className='navbar-signout-button'
+                         onClick={handleLogout}>
+                          Sign Out
+                      </div>
+                    </li>
+
+                  ):(
+                    <button className='signout-button' onClick={handleLogout}>Sign Out</button>
+                  )
+                  
+              )}
+
+
             </ul>
           </div>
         </div>

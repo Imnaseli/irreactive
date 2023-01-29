@@ -3,10 +3,10 @@ import Header from '../components/Header'
 import Redline from '../components/RedLine'
 import '../style/style.scss'
 
-const Home = () => {
+const Home = ({user ,  handleLogout}) => {
   return (
     <>
-      <Header/>
+      <Header user={user} handleLogout = {handleLogout}/>
       <Redline/>
       {/* <h1>Irreactive</h1> */}
     </>

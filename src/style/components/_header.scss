@@ -97,5 +97,33 @@
     .nav-elements ul li {
       margin-right: unset;
       margin-top: 22px;
+
+
     }
   }
+
+  .header-links li{
+    display: flex;
+    align-items: center;
+  }
+
+.signout-button{
+  font-size: 1rem;
+  letter-spacing: 2px;
+  // background-color: var(--gbforeground-colour);
+  background-color: var(--gbdarkerforeground-colour);
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--gbfontcolor);
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px 2px 2px 0px 0px 3px 3px 0px 0px 4px 4px 0px 0px 5px 5px 0px 0px;
+}
+
+
+// pls come back and style this rubbing gee, plsssssss
+.navbar-signout-button{
+  border: solid 2px black;
+  padding: 0.2rem;
+}

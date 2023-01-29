@@ -2,10 +2,10 @@ import React from 'react'
 import Header from '../components/Header'
 import Redline from '../components/RedLine'
 
-const About = () => {
+const About = ({user ,  handleLogout}) => {
   return (
     <>
-      <Header/>
+      <Header user={user} handleLogout = {handleLogout}/>
       <Redline/>
       <div>About</div>
     </>
