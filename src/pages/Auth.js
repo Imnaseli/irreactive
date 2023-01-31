@@ -35,40 +35,46 @@ const Auth = ({setUser}) => {
   const handleAuth = async (e) => {
     e.preventDefault();
 
-    console.log("button works")
-    console.log(signUp)
-    console.log(email)
-    console.log(password)
+    // console.log("button works")
+    // console.log(signUp)
+    // console.log(email)
+    // console.log(password)
 
     if (!signUp) { //sign in
       if (email && password) {
-        const { user } = await signInWithEmailAndPassword(
-          auth,
-          email,
-          password
-        );
-        setUser(user);
-        navigate('/')
+        try {
+          const { user } = await signInWithEmailAndPassword( auth, email, password );
+          setUser(user);
+          toast.success("Welcome to Irreactive.")
+          navigate('/')
+        } catch (error) {
+          return toast.error('Failed to sign in')
+        }
       }else {
         return toast.error("All fields are mandatory to fill");
       }
-    }else {//sign up
+    }
+    else {//sign up
       if (password !== confirmPassword) {
         return toast.error("Password don't match");
       }
+
       if (firstName && lastName && email && password) {
-        const { user } = await createUserWithEmailAndPassword(
-          auth,
-          email,
-          password
-        );
-        await updateProfile(user, { displayName: `${firstName} ${lastName}` });
-        // setActive("home");
-      } else {
+        try {
+          const { user } = await createUserWithEmailAndPassword(auth, email, password);
+          await updateProfile(user, { displayName: `${firstName} ${lastName}` }); 
+          toast.success('Success to Sign up new account')
+          // console.log(signUp)
+          setSignUp(false)
+
+        } catch (error) {
+          return toast.error('Failed to Sign up new account')
+        }} 
+      else {
         return toast.error("All fields are mandatory to fill");
       }
     }
-    navigate("/");
+    // navigate("/");
   };
 
   return (

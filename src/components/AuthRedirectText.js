@@ -19,7 +19,8 @@ const AuthRedirectText = ({signUp , setSignUp}) => {
             </div>
         </>
         ) : (
-            <>
+            //to sign up
+            <>  
                 <div className="auth-redirect-div">
                     <p className="auth-redirect-p">
                         Already have an account?&nbsp;
