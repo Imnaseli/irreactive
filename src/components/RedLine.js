@@ -1,9 +1,9 @@
 import React from 'react'
 import '../style/style.scss'
 
-const Redline = () => {
+const Redline = ({name}) => {
   return (
-    <div className='Redline'></div>
+    <div className={`${name}`}></div>
   )
 }
 

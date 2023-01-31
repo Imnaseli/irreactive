@@ -79,7 +79,7 @@ const Auth = ({setUser}) => {
 
   return (
     <main className="auth-outer-container" >
-    <Redline/>
+    <Redline name={"Redline"}/>
       <div className="auth-main">
           <div className="auth-container">
             <AuthHeader signUp={signUp} />
@@ -147,7 +147,7 @@ const Auth = ({setUser}) => {
             </div>
           </div>
       </div>
-    <Redline/>
+    <Redline name={"Redline"}/>
     </main>
   )
 }

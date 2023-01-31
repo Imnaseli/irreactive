@@ -1,0 +1,14 @@
+.create-page{
+    height: 100%;
+    width: 100%;
+
+    border: solid 3px green;
+}
+
+.create-main{
+    height: 99%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    //border: 5px solid red;
+}

@@ -1,3 +1,6 @@
 chamge the displayName from firstnamelastname to username/nickname.
 also change the signup forms to username.
 create an error catching mechanism w the firebase auth system in auth.js
+
+protected route around create page
+set default props for redline

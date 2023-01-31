@@ -30,7 +30,7 @@ const Header = ({user , handleLogout}) => {
 
               { user &&(
                 <li>
-                  <NavLink to="/create">Add</NavLink>
+                  <NavLink to="/create">Create</NavLink>
                 </li>)}
 
               <li>

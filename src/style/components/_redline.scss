@@ -1,5 +1,15 @@
+
+//for Redlines with fixed positions
 .Redline{
     position: fixed;
+    background-color: var(--gborange);
+    width: 100vw;
+    height: 1vh;
+}
+
+
+.NFRedline{
+    // position: fixed;
     background-color: var(--gborange);
     width: 100vw;
     height: 1vh;

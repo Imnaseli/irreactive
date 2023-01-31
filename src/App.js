@@ -33,7 +33,7 @@ function App() {
   const handleLogout = () => {
     signOut(auth).then(() => {
       setUser(null);
-      console.log('handlelog')
+      //console.log('handlelog')
       navigate("/authentication");
     });
   };
@@ -48,7 +48,7 @@ function App() {
          <Route path='/about' element = {<About user = {user} handleLogout = {handleLogout}/>}/>
          <Route path='/authentication' element = {<Auth setUser={setUser} />}/>
          <Route path='/edit/:id' element = {<AddEditblog />}/>
-         <Route path='/create' element = {<AddEditblog />}/>
+         <Route path='/create' element = {<AddEditblog  user = {user} handleLogout = {handleLogout} />}/>
          <Route path='*' element = {<NotFound />}/>
         </Routes>
       
