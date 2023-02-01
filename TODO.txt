@@ -4,3 +4,4 @@ create an error catching mechanism w the firebase auth system in auth.js
 
 protected route around create page
 set default props for redline
+Make media queries for add edit blog form width

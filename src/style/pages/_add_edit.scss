@@ -2,13 +2,125 @@
     height: 100%;
     width: 100%;
 
-    border: solid 3px green;
+    // border: solid 3px green;
 }
 
 .create-main{
-    height: 99%;
+    height: auto;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    //border: 5px solid red;
+    // display: grid;
+    // grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+
+    // border: 5px solid red;
+}
+
+.createheader{
+    text-align: center;
+}
+
+.createheader h2{
+    text-decoration: line-through;
+    padding: 1rem 1rem;
+    margin:0 ;
+    font-family: "Righteous",Helvetica, sans-serif;
+}
+
+.createformcontainer{
+    display: flex;
+    flex-direction: column;
+    width: 66%;
+    //60on wider screens
+    //justify and align stuff
+    justify-content: center;
+    align-items: center;
+
+    // border: 5px solid green;
+}
+
+.createform{
+    width: 83%;
+    //80 on wider screens
+}
+
+
+
+.create-input-div {
+    margin: 1rem 0;   
+}
+
+.create-input-div input{
+    width: 100%;
+    padding: 12px 20px;
+
+    border: 2px solid var(--gbfontcolor);
+    background-color: var(--gbforeground-colour);
+
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+
+.create-input-div input:focus{
+    border:2px solid var(--gborange);
+    // outline-color: ;
+} 
+
+.create-input-div textarea{
+    width: 100%;
+    padding: 12px 20px;
+
+    border: 2px solid var(--gbfontcolor);
+    background-color: var(--gbforeground-colour);
+
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+.create-input-div textarea:focus{
+    border:2px solid var(--gborange);
+    // outline-color: ;
+} 
+
+.create-button-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-button
+{
+    font-size: 1rem;
+    letter-spacing: 2px;
+    background-color: var(--gbforeground-colour);
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--gbfontcolor);
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px 2px 2px 0px 0px 3px 3px 0px 0px 4px 4px 0px 0px 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.create-button:active
+{
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
+
+@media (min-width:768px){
+    .create-button
+    {
+        padding: 0.25em 0.75em;
+    }
 }

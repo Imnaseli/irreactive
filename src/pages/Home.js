@@ -7,7 +7,7 @@ const Home = ({user ,  handleLogout}) => {
   return (
     <>
       <Header user={user} handleLogout = {handleLogout}/>
-      <Redline/>
+      <Redline name={"Redline"}/>
       {/* <h1>Irreactive</h1> */}
     </>
   )
