@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       //soon to change ------------------------------- Remove this var dec, it makes it logged in after every reload
-      authUser = 1
+      // authUser = 1
 
       if (authUser) {
         setUser(authUser);

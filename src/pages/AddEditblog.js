@@ -2,9 +2,11 @@ import React from 'react'
 import {useState , useEffect} from 'react'
 import Header from '../components/Header'
 import Redline from '../components/RedLine'
-import ReactTagInput from '@pathofdev/react-tag-input'
-import {storage} from '../firebase'
+//import ReactTagInput from '@pathofdev/react-tag-input'
+import { TagsInput } from "react-tag-input-component"
+import {storage , database} from '../firebase'
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
+import { addDoc,collection, serverTimestamp } from 'firebase/firestore'
 
 const initialState = {
   title : "",
@@ -19,7 +21,6 @@ const AddEditblog = ({user ,  handleLogout}) => {
   const [form, setForm] = useState(initialState)
   const [file, setFile] = useState(null)
   const [progress, setProgress] = useState(null)
-
   const {title  , tags ,  description} = form
 
   useEffect(()=>{
@@ -47,18 +48,33 @@ const AddEditblog = ({user ,  handleLogout}) => {
             setForm((prev) => ({...prev, imgUrl:downloadurl}))
           })})}
       file && uploadfile()
+      // console.log(form)
   } ,[file])
-
-
-  // const handleChange = (e) => {
-  // }
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  const handletags = (tags) => {
+    setForm({...form, tags})
+    // console.log(tags)
+  }
 
-  const handletags = () => {
+  const handleSubmit = async (e) => {
+      e.preventDefault()
+      if(title && tags && description){
+        try {
+            await addDoc(collection(database, "blogs"),{
+              ...form,
+              timestamp:serverTimestamp(),
+              author:user.displayName,
+              userId:user.uid,
+            }
+            )
+        } catch (error) {
+          console.log(error)
+        }
+      }
   }
 
 
@@ -73,7 +89,7 @@ const AddEditblog = ({user ,  handleLogout}) => {
           
           <div className='createformcontainer'>
               <div className='createform'>
-                  <form>
+                  <form onSubmit={handleSubmit}>
 
                     <div className="create-input-div">
                         <input
@@ -87,7 +103,16 @@ const AddEditblog = ({user ,  handleLogout}) => {
                     </div>
 
                     <div className="create-input-div">
-                      <ReactTagInput tags={tags} placeholder="Tags" onChange={handletags} />
+                      {/* <ReactTagInput 
+                      tags={tags} 
+                      placeholder="Tags" 
+                      onChange={handletags} /> */}
+
+                      <TagsInput
+                      value={tags}
+                      onChange={handletags}
+                      placeHolder="Tags"
+                      />
                     </div>
 
                     <div className="create-input-div">
