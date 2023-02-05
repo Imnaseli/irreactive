@@ -1,0 +1,51 @@
+.blog-border{
+    margin: 10px 0 0 0;
+    border:none;
+    border-bottom: var(--gbfontcolor) 2px solid;
+    width: min(100% - 40px , 900px);
+
+}
+
+.blogtimestamp{
+    //border: red 3px solid;
+    display: flex;
+    justify-content: center;  
+}
+
+.blogtimestamp p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.blogtitle{
+    //border: red 3px solid;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.blogtitle h1{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+}
+
+.blogdescription{
+    // border: red 3px solid;
+    display: flex;
+    margin-inline: auto;
+    justify-content: center;
+    width: min(100% - 40px , 70%);
+    text-align: center;
+}
+
+.blogdescription p{
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+
+.blognav{
+    //border: red 3px solid;
+    display: flex;
+    justify-content: center;
+}

@@ -8,7 +8,7 @@ import { auth } from "./firebase";
 import 'react-toastify/dist/ReactToastify.css'
 import { signOut } from "firebase/auth";
 import AddEditblog from './pages/AddEditblog'
-import {Routes , Route , useNavigate} from 'react-router-dom'
+import {Routes , Route , useNavigate, Navigate} from 'react-router-dom'
 import {ToastContainer} from 'react-toastify'
 import './style/style.scss';
 
@@ -47,8 +47,8 @@ function App() {
          <Route path='/detail/:id' element = {<Detail />}/>
          <Route path='/about' element = {<About user = {user} handleLogout = {handleLogout}/>}/>
          <Route path='/authentication' element = {<Auth setUser={setUser} />}/>
-         <Route path='/edit/:id' element = {<AddEditblog />}/>
-         <Route path='/create' element = {<AddEditblog  user = {user} handleLogout = {handleLogout} />}/>
+         <Route path='/edit/:id' element = {user?.uid? <AddEditblog /> : <Navigate to="/authentication" /> }/>
+         <Route path='/create' element = {user?.uid? <AddEditblog  user = {user} handleLogout = {handleLogout} /> : <Navigate to="/authentication" />} />
          <Route path='*' element = {<NotFound />}/>
         </Routes>
       

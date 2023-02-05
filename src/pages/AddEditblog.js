@@ -7,6 +7,7 @@ import { TagsInput } from "react-tag-input-component"
 import {storage , database} from '../firebase'
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
 import { addDoc,collection, serverTimestamp } from 'firebase/firestore'
+import {useNavigate} from 'react-router-dom'
 
 const initialState = {
   title : "",
@@ -22,6 +23,8 @@ const AddEditblog = ({user ,  handleLogout}) => {
   const [file, setFile] = useState(null)
   const [progress, setProgress] = useState(null)
   const {title  , tags ,  description} = form
+    
+  const navigate = useNavigate()
 
   useEffect(()=>{
       const uploadfile = () => {
@@ -71,10 +74,11 @@ const AddEditblog = ({user ,  handleLogout}) => {
               userId:user.uid,
             }
             )
-        } catch (error) {
-          console.log(error)
+        }catch (error) {
+        console.log(error)
         }
       }
+    navigate("/")
   }
 
 

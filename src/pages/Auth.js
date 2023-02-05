@@ -35,11 +35,6 @@ const Auth = ({setUser}) => {
   const handleAuth = async (e) => {
     e.preventDefault();
 
-    // console.log("button works")
-    // console.log(signUp)
-    // console.log(email)
-    // console.log(password)
-
     if (!signUp) { //sign in
       if (email && password) {
         try {

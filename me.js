@@ -255,7 +255,7 @@ return (
 
 
 
-
+)
 
 
 
@@ -275,6 +275,7 @@ return (
         </p>
         </div>
     </>
+        
     ) : (
     <>
         <div className="text-center justify-content-center mt-2 pt-2">
@@ -295,6 +296,5 @@ return (
     </>
     )}
 </div>
-
 
 </>
