@@ -8,7 +8,7 @@ import { database } from '../firebase'
 
 //the user and handleLogout is here for the header
 const Home = ({user ,  handleLogout}) => {
-  const [loading, setLoading] = useState(true)
+  //const [loading, setLoading] = useState(true)
   const [blogs, setBlogs] = useState([])
 
   useEffect(() => {

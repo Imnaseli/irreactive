@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import {List } from 'react-bootstrap-icons'
-import Logo from './Logo'
+import Logo from './Logotitle'
 import { NavLink } from 'react-router-dom'
 import '../style/style.scss'
 
