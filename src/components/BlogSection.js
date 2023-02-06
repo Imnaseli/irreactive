@@ -15,6 +15,7 @@ const BlogSection = ({blogs, user}) => {
                         <div className="blogdescription"><p>{shorten(blog.description , 120)}</p></div>
                         <div className="blognav"><p>Read More.</p></div>
                         <div></div>
+                        <br/>
                 </div>
             ))}
     </>

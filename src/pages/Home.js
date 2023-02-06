@@ -29,8 +29,6 @@ const Home = ({user ,  handleLogout}) => {
     }
   } , [])
 
-  //console.log("blogs", blogs)
-
   return (
     <>
       <Header user={user} handleLogout = {handleLogout}/>
@@ -41,8 +39,6 @@ const Home = ({user ,  handleLogout}) => {
             <BlogSection blogs={blogs} user={user}/>
           </div>
       </main>
-      
-      
     </>
   )
 }
