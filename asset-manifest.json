@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/irreactive/static/css/main.7dd9339c.css",
+    "main.js": "/irreactive/static/js/main.396c6464.js",
+    "index.html": "/irreactive/index.html",
+    "main.7dd9339c.css.map": "/irreactive/static/css/main.7dd9339c.css.map",
+    "main.396c6464.js.map": "/irreactive/static/js/main.396c6464.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7dd9339c.css",
+    "static/js/main.396c6464.js"
+  ]
+}
