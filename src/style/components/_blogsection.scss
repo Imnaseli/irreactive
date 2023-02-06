@@ -1,9 +1,8 @@
 .blog-border{
     margin: 10px 0 0 0;
     border:none;
-    border-bottom: var(--gbfontcolor) 2px solid;
+    // border-bottom: var(--gbfontcolor) 2px solid;
     width: min(100% - 40px , 900px);
-
 }
 
 .blogtimestamp{
@@ -16,18 +15,27 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
     font-style: italic;
+    margin:0;
 }
 
 .blogtitle{
-    //border: red 3px solid;
+    // border: red 3px solid;
     display: flex;
     justify-content: center;
     text-align: center;
+    // margin: 5rem, 0;
 }
 
 .blogtitle h1{
     font-family: 'Roboto Slab', serif;
     font-weight: 400;
+    margin-bottom: 0;
+}
+
+.blogtag{
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0;
 }
 
 .blogdescription{
@@ -48,4 +56,18 @@
     //border: red 3px solid;
     display: flex;
     justify-content: center;
+    font-weight: bolder;
+    color: var(--gbpurple);
+    cursor: pointer;
+
+}
+
+.blognav p {
+    // margin: 0;
+}
+
+.blogline{
+    width: 50%;
+    margin: 0;
+    margin-inline: auto;
 }

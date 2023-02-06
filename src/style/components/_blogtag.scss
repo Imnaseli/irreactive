@@ -1,0 +1,13 @@
+.blogtagmain{
+    display: flex;
+    flex-direction: row;
+}
+
+.blogtagindividual{
+    margin: 2px;
+    border: 2px solid var(--gbpurple);
+    border-radius: 10px;
+    padding: 3px;
+    color: var(--gbpurple);
+}
+

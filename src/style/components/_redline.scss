@@ -1,7 +1,7 @@
 
 //for Redlines with fixed positions
 .Redline{
-    position: fixed;
+    position: sticky;
     background-color: var(--gborange);
     width: 100vw;
     height: 1vh;
