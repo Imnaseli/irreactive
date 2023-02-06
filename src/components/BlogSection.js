@@ -14,7 +14,12 @@ const BlogSection = ({blogs, user}) => {
                         <div className="blogtitle"><h1>{blog.title}</h1></div>
                         <div className="blogtag"> <BlogTag tags={blog.tags} /> </div>
                         <div className="blogdescription"><p>{shorten(blog.description , 120)}</p></div>
-                        <div className="blognav"><p>Read More.</p></div>
+                        <div className="blognav"><p>
+                        {/* /detail/:id */}
+                          <Link to={`/detail/${blog.id}`}>
+                            Read More.
+                          </Link>
+                          </p></div>
                         <div></div>
                         <hr className='blogline'/>
                 </div>

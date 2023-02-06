@@ -1,0 +1,62 @@
+.blogdetailcontainer{
+    width: 100%;
+    height: 100%;
+}
+
+.blogdetailmain{
+    width: 70%;
+    margin-inline: auto;
+}
+
+.blogdetailimg{
+    display: flex;
+    justify-content: center;
+}
+
+.blogdetaildate{
+    display: flex;
+    justify-content: center;  
+}
+
+.blogdetaildate p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    margin:0;
+}
+
+.blogdetailtitle{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.blogdetailtitle h1{   
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+    margin-bottom: 0;
+    color:var(--gborange);
+}
+
+.blogdetailauthor{
+    display: flex;
+    justify-content: center;  
+}
+
+.blogdetailauthor p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    margin:0;
+}
+
+.blogdetaildescription{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.blogdetaildescription p{
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
