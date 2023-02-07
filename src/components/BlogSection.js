@@ -15,7 +15,6 @@ const BlogSection = ({blogs, user}) => {
                         <div className="blogtag"> <BlogTag tags={blog.tags} /> </div>
                         <div className="blogdescription"><p>{shorten(blog.description , 120)}</p></div>
                         <div className="blognav"><p>
-                        {/* /detail/:id */}
                           <Link to={`/detail/${blog.id}`}>
                             Read More.
                           </Link>

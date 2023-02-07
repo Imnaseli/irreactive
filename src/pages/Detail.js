@@ -6,22 +6,18 @@ import {database} from '../firebase'
 import '../style/style.scss'
 
 const Detail = () => {
-  const [blog , setBlog] = useState()
-  const {id} = useParams()
-
-
+    const [blog , setBlog] = useState()
+    const {id} = useParams()
 
   useEffect(() => {
     id && getblogdetail()
-  }, [id])
-
-  }
-
+  }, [id ])// eslint-disable-line react-hooks/exhaustive-deps 
 
   const getblogdetail = async () => {
-  const docref = doc(database, "blogs", id )
-  const blogdetail = await getDoc(docref) 
-  setBlog(blogdetail.data())
+    const docref = doc(database, "blogs", id )
+    const blogdetail = await getDoc(docref) 
+    setBlog(blogdetail.data())
+    }
 
   return (
     <div className='blogdetailcontainer'>
