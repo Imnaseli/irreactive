@@ -23,7 +23,7 @@ const Detail = () => {
     <div className='blogdetailcontainer'>
         <Redline name="Redline"/>
           <div className='blogdetailmain'>
-            <div className='blogdetailimg'><img alt=" " src={blog?.imgUrl} /></div> 
+            <div className='blogdetailimg'><img className="blogdetailpicture" alt=" " src={blog?.imgUrl} /></div> 
             <div className='blogdetaildate'><p>{blog?.timestamp.toDate().toDateString()}</p></div>
             <div className='blogdetailtitle'><h1>{blog?.title}</h1></div>
             <div className='blogdetaildescription'><p>{blog?.description}</p></div>
