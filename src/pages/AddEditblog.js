@@ -88,7 +88,7 @@ const AddEditblog = ({user ,  handleLogout}) => {
       <Redline name="NFRedline"/>
         <div className='create-main'>
           <div className='createheader'>
-            <h2>Welcome {`${user?.displayName}`}, we are interested in what you have to say.</h2>
+            <h2>Welcome {`${user?.displayName}`}, what do you have to say?</h2>
           </div>
           
           <div className='createformcontainer'>
